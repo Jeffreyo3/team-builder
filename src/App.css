@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 55vw;
+  margin: 0 auto;
+}
+
+.formField {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  border: 1px dashed black;
+  border-radius: 10px;
+  margin: 2%;
+  padding: 2%;
+
+  text-align: center;
+}
+
+label {
+  margin: 2% 0;
+  padding: 2% auto;
+}
+
+button {
+  background-color: lightslategray;
+  padding: 3% 6%;
+  margin: 5% auto;
+  border: 2px solid blue;
+  border-radius: 15px;
+  color: darkblue;
+  font-weight: 600;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.info {
+
+  width: 325px;
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  margin: 1.5% auto;
+  justify-content: space-between;
+
+  background-color: lightslategray;
+  border: 2px dashed blue;
+  border-radius: 15px;
+  padding: 2% 0.25%;
+
+  
+}
+
+h2 {
+  margin: 0 auto 5% auto;
+}
+
+p {
+  margin: 2% auto;
+  color: darkblue;
+  font-weight: bold;
+}
+
+.p-cont{
+  height: 120px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
