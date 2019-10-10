@@ -9,8 +9,10 @@ const Info = (props) => {
                 return (
                     <div className="info" key={info.id}>
                         <h2>{info.name}</h2>
-                        <p>{info.email}</p>
-                        <p>{info.role}</p>
+                        <div className="p-cont">
+                            <p>{info.email}</p>
+                            <p>{info.role}</p>
+                        </div>
                     </div>
                 );
             })}

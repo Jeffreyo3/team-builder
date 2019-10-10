@@ -9,10 +9,10 @@ function App() {
 
   const [memberInfo, setMemberInfo] = useState([
       {
-          id: '',
-          name: '',
-          email: '',
-          role: ''
+          id: '0',
+          name: 'Example Name',
+          email: 'example@email.net',
+          role: 'Chief Example Officer'
       }
   ]);
 
