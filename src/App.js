@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import ReactDOM from "react-dom";
+
+import TeamForm from './component/TeamForm.js';
+import Info from './component/Info.js';
 import './App.css';
 
 function App() {
+
+  const [memberInfo, setMemberInfo] = useState([
+      {
+          id: '',
+          name: '',
+          email: '',
+          role: ''
+      }
+  ]);
+
+  const addInfo = info => {
+      const newInfo = {
+          id: Date.now(),
+          name: info.name,
+          email: info.email,
+          role: info.role
+      };
+
+      setMemberInfo([...memberInfo, newInfo]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+          <h1>Team Info</h1>
+          <TeamForm addInfoFn={addInfo} />
+          <Info infoList={memberInfo} />
+      </div>
   );
 }
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App/>, rootElement);
 
 export default App;
